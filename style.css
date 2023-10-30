@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Kalam:wght@300&family=Lora:ital@1&family=Poppins:wght@200&family=Quicksand&family=Space+Mono&display=swap');
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(images/chalk.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    width: 1100px;
+    padding: 80px 50px;
+    border-radius: 10px;
+    align-items: flex-end;
+    justify-content: space-between;   
+    background: #FFFFF0 ;
+    gap: 120px;
+}
+
+.hidden {
+  opacity: 0;
+  animation: transition .5s ease-in-out .5s forwards;
+}
+
+@keyframes transition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hangman-img h1 {
+    text-align: center;
+    font-size: 36px;
+    font-family: Lora;
+    overflow: hidden; 
+    border-right: .1em solid black; 
+    white-space: nowrap; 
+    height: 45px;
+    margin: 0 auto; 
+    letter-spacing: .15em; 
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret 1s step-end infinite;
+}
+
+.hangman-img h1.enable-blink {
+  animation: typing 3.5s steps(30, end), blink-caret 1s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black }
+}
+
+.hangman-img img {
+  margin-top: 50px;
+}
+
+.hangman-guess .word-display {
+    margin-bottom: 40px;
+    gap: 20px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-family: Kalam;
+}
+
+.hangman-guess .wrong-guesses {
+    text-align: end;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-family: Kalam;
+}
+
+.hangman-guess .letters {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.letters button {
+  align-items: center;
+  appearance: none;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.letters button:active {
+  background-color: transparent !important;
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.letters button:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.letters button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-5px);
+}

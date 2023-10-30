@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.8.0/dist/sweetalert2.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Kalam:wght@300&family=Lora:ital@1&family=Poppins:wght@200&family=Quicksand&family=Space+Mono&display=swap"/>
+    <title>Hangman</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="container hidden">
+        <div class="hangman-img">
+          <h1>Play Hangman</h1>
+          <img
+            class="hangman-update"
+            src="images/hangman-0.svg"
+            alt="hangman-image"/>
+        </div>
+        <div class="hangman-guess">
+          <h2 class="word-display"></h2>
+          <div class="letters"></div>
+          <h2 class="wrong-guesses"></h2>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.8.0/dist/sweetalert2.all.min.js"></script>
+  </body>
+</html>
